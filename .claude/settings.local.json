@@ -1,0 +1,6 @@
+{
+    // I prefer to use the most powerful model for complex planning, overriding the team default.
+    "model": "claude-3-opus-20240229",
+    // I want to see exactly what Claude is doing.
+    "verbose": true
+}

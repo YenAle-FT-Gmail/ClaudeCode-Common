@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Logs and sensitive files
+*.log
+.env
+*.local
+secrets/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Large assets
+assets/videos/

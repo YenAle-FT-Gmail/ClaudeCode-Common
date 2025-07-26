@@ -1,0 +1,16 @@
+[
+    {
+        // This server gives Claude the ability to control a headless web browser.
+        // Extremely useful for UI testing, web scraping, or visual feedback loops.
+        // Requires the Puppeteer MCP server to be running separately.
+        "name": "browser",
+        "url": "http://localhost:3001",
+        "description": "A web browser that can be used to view pages, take screenshots, and interact with elements.",
+        "tools": [
+            "navigate",
+            "screenshot",
+            "click",
+            "type"
+        ]
+    }
+]
