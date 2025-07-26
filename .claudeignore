@@ -13,5 +13,12 @@ secrets/
 .DS_Store
 Thumbs.db
 
-# Large assets
-assets/videos/
+# Add project-specific ignores below
+# -----------------------------------
+# Example for Python:
+# __pycache__/
+# .venv/
+# instance/
+
+# Example for Vite:
+# .vite-cache/

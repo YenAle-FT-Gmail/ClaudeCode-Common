@@ -1,35 +1,39 @@
-# Project Constitution: "EchoLoom" Web App
+# Project Constitution: {PROJECT_NAME}
 
 ## 1. Project Overview
-You are an expert full-stack TypeScript developer. Your task is to help build and maintain EchoLoom, a real-time collaborative text editor. The application uses a React frontend and a Node.js/Express backend with WebSocket for real-time communication.
+You are {PERSONA}.
+Your primary task is to {PROJECT_OVERVIEW}.
 
 ## 2. Core Architecture & Tech Stack
-- **Monorepo Structure:** The project is a monorepo with two main packages: `packages/client` (React frontend) and `packages/server` (Express backend).
-- **Frontend:** React 18, TypeScript, Vite, Tailwind CSS. State management is handled with Zustand.
-- **Backend:** Node.js 20, Express, TypeScript, WebSocket (`ws` library).
-- **Database:** PostgreSQL with Prisma ORM.
-- **Key Files:**
-    - `packages/client/src/App.tsx`: Main frontend component.
-    - `packages/server/src/server.ts`: Main backend entry point and WebSocket server setup.
-    - `prisma/schema.prisma`: The single source of truth for the database schema.
+- **Tech Stack:** {TECH_STACK_LIST}
+    - *Example: Python 3.11, FastAPI, Poetry, PostgreSQL, SQLAlchemy*
+    - *Example: React 18, Vite, TypeScript, Tailwind CSS, Zustand*
+
+- **Key Directories:**
+{KEY_DIRECTORIES_LIST}
+    - *Example: `/app/routers/` for API endpoint routers.*
+    - *Example: `/src/components/` for reusable UI components.*
 
 ## 3. Coding Standards & Conventions
-- **Language:** All code MUST be written in TypeScript.
-- **Style:** Adhere to the rules in `.eslintrc.json`. Use Prettier for formatting.
-- **Commit Messages:** Follow the Conventional Commits specification. A `/gen_commit_msg` command is available.
-- **Testing:** Use Jest for all unit and integration tests. All new features must be accompanied by tests. Place test files next to the source files (`*.test.ts`).
+{CODING_STANDARDS_DESCRIPTION}
+- *Example: Adhere to Black for formatting and Flake8 for linting.*
+- *Example: All commit messages MUST follow the Conventional Commits specification.*
+- *Example: All new logic MUST be accompanied by unit tests.*
 
 ## 4. Essential Commands
-Always use these exact commands. Do not guess or improvise.
+You MUST use these exact commands. Do not improvise. Refer to them by name.
 
 <commands>
+{COMMAND_LIST}
+# --- Backend Example Commands (replace as needed) ---
+- **Install Dependencies:** `poetry install`
+- **Run Dev Server:** `poetry run uvicorn app.main:app --reload`
+- **Run Tests:** `poetry run pytest`
+
+# --- Frontend Example Commands (replace as needed) ---
 - **Install Dependencies:** `npm install`
-- **Run Frontend Dev Server:** `npm run dev --workspace=client`
-- **Run Backend Dev Server:** `npm run dev --workspace=server`
-- **Run All Tests:** `npm test`
-- **Run Linter:** `npm run lint`
-- **Format Code:** `npm run format`
-- **Generate Prisma Client:** `npx prisma generate`
+- **Run Dev Server:** `npm run dev`
+- **Run Tests:** `npm run test -- --watchAll=false`
 </commands>
 
 ## Critical Rules

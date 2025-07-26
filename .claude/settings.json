@@ -1,23 +1,21 @@
 {
-    // Use the faster, more cost-effective model for most development tasks.
     "model": "claude-3-5-sonnet-20240620",
     "permissions": {
-        // Grant persistent permission for common, safe commands defined in CLAUDE.md
         "allowed_tools": [
-            "npm install",
-            "npm test",
-            "npm run lint",
-            "npm run format",
             "git diff --staged"
+            // Add common, safe commands for THIS project here.
+            // Example for Python: "poetry run pytest"
+            // Example for Node: "npm test"
         ]
     },
     "hooks": {
-        // After Claude successfully modifies a file, automatically run the linter and formatter.
         "PostToolUse": [
             {
                 "tool_name": "edit_file",
-                "command": "npm run lint -- --fix {{filename}} && npm run format {{filename}}",
-                "show_output": false // Don't clutter the chat with linter output unless there's an error.
+                // This command assumes Prettier/ESLint is configured.
+                // Customize or remove it if your project uses different tools.
+                "command": "npm run format {{filename}}",
+                "show_output": false
             }
         ]
     }
